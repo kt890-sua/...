@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoa hồng nở</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fce4ec;
+            font-family: Arial, sans-serif;
+        }
+        #rose {
+            width: 100px;
+            height: 100px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/66/Rose_Blender_3D_Model.png');
+            background-size: cover;
+            transform: scale(0);
+            transition: transform 1s ease-in-out;
+        }
+        .show {
+            transform: scale(1);
+        }
+        #btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="rose"></div>
+    <button id="btn">Click Me</button>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function() {
+            document.getElementById('rose').classList.add('show');
+        });
+    </script>
+</body>
+</html>
